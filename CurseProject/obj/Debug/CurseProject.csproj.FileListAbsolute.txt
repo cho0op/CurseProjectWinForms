@@ -1,0 +1,10 @@
+D:\мои файлы\my projects\CurseProject\CurseProject\bin\Debug\CurseProject.exe.config
+D:\мои файлы\my projects\CurseProject\CurseProject\bin\Debug\CurseProject.exe
+D:\мои файлы\my projects\CurseProject\CurseProject\bin\Debug\CurseProject.pdb
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.csprojAssemblyReference.cache
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.Properties.Resources.resources
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.csproj.GenerateResource.cache
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.csproj.CoreCompileInputs.cache
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.exe
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.pdb
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.LoginForm.resources
