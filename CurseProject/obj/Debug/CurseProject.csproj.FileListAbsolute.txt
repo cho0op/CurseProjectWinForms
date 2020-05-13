@@ -25,3 +25,8 @@ D:\мои файлы\my projects\CurseProject\CurseProject\bin\Debug\MySql.Data.
 D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.exe.config
 D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.csproj.CopyComplete
 D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.RegisterForm.resources
+D:\мои файлы\my projects\CurseProject\CurseProject\bin\Debug\Database.mdf
+D:\мои файлы\my projects\CurseProject\CurseProject\bin\Debug\Database_log.ldf
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.students.resources
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.addStudent.resources
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.Main.resources
