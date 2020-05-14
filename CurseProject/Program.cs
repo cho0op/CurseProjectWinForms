@@ -16,7 +16,7 @@ namespace CurseProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new students());
+            Application.Run(new LoginForm());
         }
     }
 }

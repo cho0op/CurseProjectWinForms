@@ -71,6 +71,12 @@
     <Compile Include="addStudent.Designer.cs">
       <DependentUpon>addStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -98,8 +104,17 @@
     <Compile Include="students.Designer.cs">
       <DependentUpon>students.cs</DependentUpon>
     </Compile>
+    <Compile Include="sudentsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sudentsAdmin.Designer.cs">
+      <DependentUpon>sudentsAdmin.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addStudent.resx">
       <DependentUpon>addStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -122,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="students.resx">
       <DependentUpon>students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sudentsAdmin.resx">
+      <DependentUpon>sudentsAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

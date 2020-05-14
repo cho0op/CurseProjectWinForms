@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,10 @@ namespace CurseProject
 {
     public partial class LoginForm : Form
     {
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
         public LoginForm()
         {
             InitializeComponent();
@@ -28,26 +33,41 @@ namespace CurseProject
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            
+            String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\мои файлы\my projects\CurseProject\CurseProject\Database.mdf;Integrated Security=True";
+            SqlConnection SqlConnection = new SqlConnection(connectionString);
+            SqlConnection.Open();
             String loginUser = loginField.Text;
             String passUser = passField.Text;
+            SqlDataAdapter adapter = new SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE Login='" + loginUser + "' AND password='" + passUser + "'", SqlConnection);
+            DataTable dt = new DataTable();
+            SqlDataReader adminFounderReader = null;
+            SqlCommand adminFounderCommand = new SqlCommand("SELECT admin FROM Users WHERE Login='" + loginUser + "' AND password='" + passUser + "'", SqlConnection);
+            adminFounderReader = adminFounderCommand.ExecuteReader();
+            string admin="";
+            while (adminFounderReader.Read())
+            {
+                admin = Convert.ToString(adminFounderReader["admin"]);
+            }
+            adminFounderReader.Close();
+            adapter.Fill(dt);
+            if (dt.Rows[0][0].ToString() == "1" && admin=="1")
+            {
+                AdminMenu adminMenuForm = new AdminMenu();
+                MessageBox.Show("вы авторизируетесь как админ");
+                adminMenuForm.Show();
+                this.Hide();
 
-            DB db = new DB();
-
-            DataTable table = new DataTable();
-
-            MySqlDataAdapter adapter =new MySqlDataAdapter();
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `login` = @uL and `pass` = @uP", db.GetConnection());
-            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
-            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
-
-            adapter.SelectCommand = command;
-            adapter.Fill(table);
-
-            if (table.Rows.Count > 0)
-                MessageBox.Show("Yes");
+            }
+            else if (dt.Rows[0][0].ToString() == "1" && admin == "0")
+            {
+                students f =new students();
+                MessageBox.Show("вы авторизируетесь обычный пользователь");
+                f.Show();
+                this.Hide();
+            }
             else
-                MessageBox.Show("No");
+                MessageBox.Show("Такого аккаунта не существует");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -74,5 +94,7 @@ namespace CurseProject
         {
 
         }
+
+
     }
 }

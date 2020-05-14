@@ -30,3 +30,5 @@ D:\мои файлы\my projects\CurseProject\CurseProject\bin\Debug\Database_lo
 D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.students.resources
 D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.addStudent.resources
 D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.Main.resources
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.AdminMenu.resources
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.sudentsAdmin.resources

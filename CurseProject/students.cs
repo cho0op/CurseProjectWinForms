@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace CurseProject
@@ -35,7 +34,6 @@ namespace CurseProject
 
             SqlDataReader sqlReader = null;
             SqlCommand command = new SqlCommand("SELECT * FROM [Students] ", SqlConnection);
-
             try
             {
                 sqlReader = await command.ExecuteReaderAsync();
@@ -144,6 +142,24 @@ namespace CurseProject
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            LoginForm f = new LoginForm();
+            this.Hide();
+            f.Show();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            
         }
     }
 }

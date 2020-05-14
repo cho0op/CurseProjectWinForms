@@ -35,7 +35,6 @@
             this.loginField = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.close = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -121,7 +120,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(77)))), ((int)(((byte)(0)))));
-            this.panel2.Controls.Add(this.close);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -129,17 +127,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(534, 100);
             this.panel2.TabIndex = 0;
-            // 
-            // close
-            // 
-            this.close.AutoSize = true;
-            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.close.Location = new System.Drawing.Point(507, 9);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(24, 24);
-            this.close.TabIndex = 1;
-            this.close.Text = "X";
-            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // label1
             // 
@@ -162,12 +149,12 @@
             this.Controls.Add(this.panel1);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -182,6 +169,5 @@
         private System.Windows.Forms.TextBox passField;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button buttonLogin;
-        private System.Windows.Forms.Label close;
     }
 }

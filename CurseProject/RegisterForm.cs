@@ -8,60 +8,82 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CurseProject
 {
     public partial class RegisterForm : Form
     {
+        SqlConnection SqlConnection;
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
+            String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\мои файлы\my projects\CurseProject\CurseProject\Database.mdf;Integrated Security=True";
+            SqlConnection = new SqlConnection(connectionString);
+
+            SqlConnection.Open();
+
+        }
         public RegisterForm()
         {
             InitializeComponent();
-            userNameField.Text = "введите имя";
-            userNameField.ForeColor = Color.Gray;
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void userNameField_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void userNameField_Enter(object sender, EventArgs e)
-        {
-            if (userNameField.Text == "введите имя")
-            {
-                userNameField.Text = "";
-                userNameField.ForeColor = Color.Black;
-            }
-        }
-
-        private void userNameField_Leave(object sender, EventArgs e)
-        {
-            if (userNameField.Text == "")
-            {
-                userNameField.Text = "введите имя";
-                userNameField.ForeColor = Color.Gray;
-            }
+            loginField.Text = "введите логин";
+            loginField.ForeColor = Color.Gray;
+            passwordField.Text = "введите пароль";
+            passwordField.ForeColor = Color.Gray;
         }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
-            DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `users` (`login`, `pass`, `name`, `surname`) VALUES ('@login', '@pass', '@name', '@surname');", db.GetConnection());
-            String name = loginField.Text;
-            command.Parameters.Add("@login", MySqlDbType.VarChar).Value = "ddd";
-            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = passwordField.Text;
-            command.Parameters.Add("@name", MySqlDbType.VarChar).Value = userNameField.Text;
-            command.Parameters.Add("@surname", MySqlDbType.VarChar).Value = userSurNameField.Text;
-            db.openConnection();
-            if (command.ExecuteNonQuery() == 1)
-                MessageBox.Show("новый пользователь создан");
-            else
-                MessageBox.Show("ошибка создания новго пользователя");
-            db.closeConnection();
+            SqlCommand command = new SqlCommand("INSERT INTO [Users] (Login, Password) VALUES (@Login, @Password)", SqlConnection);
+            command.Parameters.AddWithValue("Login", loginField.Text);
+            command.Parameters.AddWithValue("Password", passwordField.Text);
+            command.ExecuteNonQuery();
+            MessageBox.Show("новый пользователь создан\n логин: " + loginField.Text + "\n пароль: " + passwordField.Text);
+            passwordField.Text = "";
+            loginField.Text = "";
+        }
+
+        private void passwordField_Enter(object sender, EventArgs e)
+        {
+            if (passwordField.Text == "введите пароль")
+            {
+                passwordField.Text = "";
+                passwordField.ForeColor = Color.Black;
+            }
+        }
+        private void passwordField_Leave(object sender, EventArgs e)
+        {
+            if (passwordField.Text == "")
+            {
+                passwordField.Text = "введите пароль";
+                passwordField.ForeColor = Color.Gray;
+            }
+        }
+        private void loginField_Leave(object sender, EventArgs e)
+        {
+            if (loginField.Text == "")
+            {
+                loginField.Text = "введите логин";
+                loginField.ForeColor = Color.Gray;
+            }
+        }
+
+        private void loginField_Enter(object sender, EventArgs e)
+        {
+            if (loginField.Text == "введите логин")
+            {
+                loginField.Text = "";
+                loginField.ForeColor = Color.Black;
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            AdminMenu f = new AdminMenu();
+            f.Show();
+            this.Hide();
         }
     }
 }
