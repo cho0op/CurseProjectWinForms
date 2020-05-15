@@ -78,6 +78,12 @@
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="DB.cs" />
+    <Compile Include="deleting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleting.Designer.cs">
+      <DependentUpon>deleting.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,11 +110,20 @@
     <Compile Include="sudentsAdmin.Designer.cs">
       <DependentUpon>sudentsAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Updating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Updating.Designer.cs">
+      <DependentUpon>Updating.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addStudent.resx">
       <DependentUpon>addStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleting.resx">
+      <DependentUpon>deleting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -131,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="sudentsAdmin.resx">
       <DependentUpon>sudentsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Updating.resx">
+      <DependentUpon>Updating.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

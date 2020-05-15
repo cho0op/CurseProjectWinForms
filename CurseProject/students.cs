@@ -197,7 +197,7 @@ namespace CurseProject
                 if (sqlReader != null)
                     sqlReader.Close();
             }
-            MessageBox.Show("средний балл группы: " + sr / i);
+            MessageBox.Show("средний балл группы: " + Math.Round(sr / i,2));
             textBox1.Text = "";
             SqlConnection.Close();
         }
@@ -307,6 +307,11 @@ namespace CurseProject
                 if (sqlReader != null)
                     sqlReader.Close();
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -53,18 +53,18 @@ namespace CurseProject
         {
             try
             {
-                int.Parse(textBox1.Text);
+                int.Parse(textBox2.Text);
             }
             catch (System.FormatException)
             {
                 MessageBox.Show("Номер группы должен состоять из 6 цифр!");
-                textBox1.Text = "";
+                textBox2.Text = "";
                 return;
             }
-            if (textBox1.Text.Length != 6)
+            if (textBox2.Text.Length != 6)
             {
                 MessageBox.Show("Номер группы должен состоять из 6 цифр!");
-                textBox1.Text = "";
+                textBox2.Text = "";
                 return;
             }
             if (textBox2.Text == "" || textBox1.Text == "" || textBox26.Text == "" || textBox25.Text == "" || textBox24.Text == "" || textBox23.Text == "" || textBox22.Text == "")
@@ -119,11 +119,22 @@ namespace CurseProject
                 return;
             }
             ekz = ekz / 5;
-            command.Parameters.AddWithValue("ФИО", textBox2.Text);
-            command.Parameters.AddWithValue("ГРУППА", textBox1.Text);
+            command.Parameters.AddWithValue("ФИО", textBox1.Text);
+            command.Parameters.AddWithValue("ГРУППА", textBox2.Text);
             command.Parameters.AddWithValue("зачёты", zach);
             command.Parameters.AddWithValue("экзамены", ekz);
-            command.ExecuteNonQuery();
+            try
+            {
+                command.ExecuteNonQuery();
+            }
+            catch (System.Data.SqlClient.SqlException)
+            {
+                MessageBox.Show("неверно введено имя");
+                textBox1.Text = "";
+                return;
+            }
+            
+            
             MessageBox.Show("новый пользователь добавлен");
             checkBox1.Checked = false;
             checkBox2.Checked = false;
@@ -141,6 +152,18 @@ namespace CurseProject
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+            AdminMenu f = new AdminMenu();
+            f.Show();
+            this.Hide();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click_1(object sender, EventArgs e)
         {
             AdminMenu f = new AdminMenu();
             f.Show();

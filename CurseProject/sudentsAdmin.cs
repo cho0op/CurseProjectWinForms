@@ -34,7 +34,7 @@ namespace CurseProject
 
                 while (await sqlReader.ReadAsync())
                 {
-                    listBox1.Items.Add(Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
+                    listBox1.Items.Add("id:" + Convert.ToString(sqlReader["Id"]) + "  " + Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
                 }
             }
             catch (Exception ex)
@@ -61,7 +61,7 @@ namespace CurseProject
 
                 while (sqlReader.Read())
                 {
-                    listBox1.Items.Add(Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
+                    listBox1.Items.Add("id:" + Convert.ToString(sqlReader["Id"]) + "  " + Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
                 }
             }
             finally
@@ -83,7 +83,7 @@ namespace CurseProject
 
                 while (sqlReader.Read())
                 {
-                    listBox1.Items.Add(Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
+                    listBox1.Items.Add("id:" + Convert.ToString(sqlReader["Id"]) + "  " + Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
                 }
             }
             finally
@@ -106,7 +106,7 @@ namespace CurseProject
 
                 while (sqlReader.Read())
                 {
-                    listBox1.Items.Add(Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
+                    listBox1.Items.Add("id:" + Convert.ToString(sqlReader["Id"]) + "  " + Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
                 }
             }
             finally
@@ -157,7 +157,7 @@ namespace CurseProject
                 {
                     sr += double.Parse(Convert.ToString(sqlReader["экзамены"]));
                     i++;
-                    listBox1.Items.Add(Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
+                    listBox1.Items.Add("id:"+Convert.ToString(sqlReader["Id"])+"  "+ Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
                 }
             }
             catch (System.Data.SqlClient.SqlException)
@@ -171,7 +171,7 @@ namespace CurseProject
                 if (sqlReader != null)
                     sqlReader.Close();
             }
-            MessageBox.Show("средний балл группы: " + sr / i);
+            MessageBox.Show("средний балл группы: "+ Math.Round(sr / i, 2));
             textBox1.Text = "";
             SqlConnection.Close();
         }
@@ -189,7 +189,7 @@ namespace CurseProject
 
                 while (sqlReader.Read())
                 {
-                    listBox1.Items.Add(Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
+                    listBox1.Items.Add("id:" + Convert.ToString(sqlReader["Id"]) + "  " + Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
                 }
             }
             finally
@@ -226,7 +226,7 @@ namespace CurseProject
 
                     while (sqlReader.Read())
                     {
-                        listBox1.Items.Add(Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
+                        listBox1.Items.Add("id:" + Convert.ToString(sqlReader["Id"]) + "  " + Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
                     }
                 }
                 catch (System.Data.SqlClient.SqlException)
@@ -249,7 +249,7 @@ namespace CurseProject
 
                     while (sqlReader.Read())
                     {
-                        listBox1.Items.Add(Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
+                        listBox1.Items.Add("id:" + Convert.ToString(sqlReader["Id"]) + "  " + Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
                     }
                 }
                 catch (System.Data.SqlClient.SqlException)
@@ -272,7 +272,7 @@ namespace CurseProject
 
                     while (sqlReader.Read())
                     {
-                        listBox1.Items.Add(Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
+                        listBox1.Items.Add("id:" + Convert.ToString(sqlReader["Id"]) + "  " + Convert.ToString(sqlReader["ФИО"]) + "   " + " группа- " + Convert.ToString(sqlReader["группа"]) + "   " + " зачёты - " + Convert.ToString(sqlReader["зачёты"]) + " из 5 " + "   " + " средний балл - " + Convert.ToString(sqlReader["экзамены"]));
                     }
                 }
                 catch (System.Data.SqlClient.SqlException)
@@ -291,6 +291,20 @@ namespace CurseProject
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Updating f = new Updating();
+            f.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            deleting f = new deleting();
+            f.Show();
         }
     }
 }

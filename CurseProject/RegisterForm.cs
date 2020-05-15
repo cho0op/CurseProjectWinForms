@@ -37,6 +37,13 @@ namespace CurseProject
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
+            if (loginField.Text == "" || loginField.Text == "")
+            {
+                MessageBox.Show("поля логина и пароля должны быть введены");
+                return;
+            }
+            if (loginField.Text == "введите логин" || loginField.Text == "введите пароль")
+                return;
             SqlCommand command = new SqlCommand("INSERT INTO [Users] (Login, Password) VALUES (@Login, @Password)", SqlConnection);
             command.Parameters.AddWithValue("Login", loginField.Text);
             command.Parameters.AddWithValue("Password", passwordField.Text);

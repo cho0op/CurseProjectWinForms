@@ -31,3 +31,5 @@ D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProjec
 D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.addStudent.resources
 D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.AdminMenu.resources
 D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.sudentsAdmin.resources
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.Updating.resources
+D:\мои файлы\my projects\CurseProject\CurseProject\obj\Debug\CurseProject.deleting.resources

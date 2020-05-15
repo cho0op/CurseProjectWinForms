@@ -72,7 +72,7 @@ namespace CurseProject
             else if (dt.Rows[0][0].ToString() == "1" && admin == "0")
             {
                 students f =new students();
-                MessageBox.Show("вы авторизируетесь обычный пользователь");
+                MessageBox.Show("вы авторизируетесь как обычный пользователь");
                 f.Show();
                 this.Hide();
             }
