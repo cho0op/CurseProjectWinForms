@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using System.IO;
 
 namespace CurseProject
 {
@@ -43,6 +44,7 @@ namespace CurseProject
             DataTable dt = new DataTable();
             SqlDataReader adminFounderReader = null;
             SqlCommand adminFounderCommand = new SqlCommand("SELECT admin FROM Users WHERE Login='" + loginUser + "' AND password='" + passUser + "'", SqlConnection);
+            SqlDataReader sqlReader = null;
             adminFounderReader = adminFounderCommand.ExecuteReader();
             string admin="";
             while (adminFounderReader.Read())
@@ -51,6 +53,14 @@ namespace CurseProject
             }
             adminFounderReader.Close();
             adapter.Fill(dt);
+            string path = @"D:\мои файлы\my projects\CurseProject\CurseProject\data.txt";
+            using (StreamWriter sw = new StreamWriter(path, true))
+            {
+                sw.WriteLine("Попытка входа от:");
+                sw.WriteLine("логин: "+ loginField.Text);
+                sw.WriteLine("пароль: " + passField.Text);
+                sw.WriteLine("");
+            }
             if (dt.Rows[0][0].ToString() == "1" && admin=="1")
             {
                 AdminMenu adminMenuForm = new AdminMenu();

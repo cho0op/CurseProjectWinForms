@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace CurseProject
 {
@@ -43,8 +44,33 @@ namespace CurseProject
             MessageBox.Show("новый пользователь создан\n логин: " + loginField.Text + "\n пароль: " + passwordField.Text);
             passwordField.Text = "";
             loginField.Text = "";
-        }
+            String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\мои файлы\my projects\CurseProject\CurseProject\Database.mdf;Integrated Security=True";
+            SqlConnection = new SqlConnection(connectionString);
 
+            SqlDataReader sqlReader = null;
+            SqlCommand newcommand = new SqlCommand("SELECT * FROM [Users] ", SqlConnection);
+
+            SqlConnection.Open();
+            string path = @"D:\мои файлы\my projects\CurseProject\CurseProject\data.txt";
+            using (StreamWriter sw = new StreamWriter(path, true))
+            {
+                try
+                {
+                    sqlReader = newcommand.ExecuteReader();
+                    while (sqlReader.Read())
+                    {
+                        sw.WriteLine("список пользователей обновлён");
+                        sw.WriteLine(Convert.ToString(sqlReader["Login"]) + "   " +  Convert.ToString(sqlReader["Password"]));
+                    }
+                }
+                finally
+                {
+                    if (sqlReader != null)
+                        sqlReader.Close();
+                }
+                sw.WriteLine("");
+            }
+        }
         private void passwordField_Enter(object sender, EventArgs e)
         {
             if (passwordField.Text == "введите пароль")
