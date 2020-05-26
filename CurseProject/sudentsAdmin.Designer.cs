@@ -31,12 +31,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -49,8 +51,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -91,23 +91,36 @@
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.button3);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(620, 100);
+            this.panel4.Location = new System.Drawing.Point(831, 100);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(180, 386);
             this.panel4.TabIndex = 3;
             // 
-            // button7
+            // button9
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(9, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(146, 44);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "все студенты";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(12, 170);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(146, 25);
+            this.button9.TabIndex = 10;
+            this.button9.Text = "редактирование";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(12, 201);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(146, 25);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "удаление";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button4
             // 
@@ -172,17 +185,30 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Сортировка по:";
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(6, 12);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(146, 44);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "все студенты";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listBox1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(0, 100);
+            this.listBox1.Location = new System.Drawing.Point(0, 99);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(632, 384);
+            this.listBox1.Size = new System.Drawing.Size(833, 320);
             this.listBox1.TabIndex = 5;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -205,12 +231,12 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(801, 100);
+            this.panel2.Size = new System.Drawing.Size(1011, 100);
             this.panel2.TabIndex = 4;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(585, 74);
+            this.textBox4.Location = new System.Drawing.Point(795, 78);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(146, 20);
             this.textBox4.TabIndex = 16;
@@ -218,7 +244,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(488, 77);
+            this.label7.Location = new System.Drawing.Point(698, 81);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 15;
@@ -226,7 +252,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(585, 22);
+            this.textBox3.Location = new System.Drawing.Point(795, 26);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(146, 20);
             this.textBox3.TabIndex = 14;
@@ -234,7 +260,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(502, 25);
+            this.label6.Location = new System.Drawing.Point(712, 29);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 13);
             this.label6.TabIndex = 13;
@@ -244,7 +270,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(620, 4);
+            this.label5.Location = new System.Drawing.Point(830, 8);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 12;
@@ -253,7 +279,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(585, 48);
+            this.textBox2.Location = new System.Drawing.Point(795, 52);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(146, 20);
             this.textBox2.TabIndex = 11;
@@ -261,7 +287,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(499, 50);
+            this.label4.Location = new System.Drawing.Point(709, 54);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 13);
             this.label4.TabIndex = 10;
@@ -273,7 +299,7 @@
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(737, 23);
+            this.button6.Location = new System.Drawing.Point(947, 27);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(52, 67);
             this.button6.TabIndex = 8;
@@ -283,7 +309,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(247, 62);
+            this.textBox1.Location = new System.Drawing.Point(394, 62);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(146, 20);
             this.textBox1.TabIndex = 9;
@@ -293,7 +319,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(247, 12);
+            this.button5.Location = new System.Drawing.Point(394, 12);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(146, 44);
             this.button5.TabIndex = 8;
@@ -301,37 +327,11 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(12, 201);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(146, 25);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "удаление";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(12, 170);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(146, 25);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "редактирование";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
             // sudentsAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 426);
+            this.ClientSize = new System.Drawing.Size(1011, 426);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.listBox1);
