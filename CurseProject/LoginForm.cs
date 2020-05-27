@@ -87,7 +87,7 @@ namespace CurseProject
 
         private void loginField_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -105,6 +105,14 @@ namespace CurseProject
 
         }
 
+        private void loginField_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
 
+        private void passField_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
+        }
     }
 }

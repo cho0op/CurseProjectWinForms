@@ -41,7 +41,7 @@ namespace CurseProject
                 while(await sqlReader.ReadAsync())
                 {
 
-                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2:-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
+                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2,-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
                     listBox1.Items.Add(student);
                 }
             }
@@ -79,7 +79,7 @@ namespace CurseProject
 
                 while (sqlReader.Read())
                 {
-                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2:-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
+                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2,-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
                     listBox1.Items.Add(student);
                 }
             }
@@ -103,7 +103,7 @@ namespace CurseProject
 
                 while (sqlReader.Read())
                 {
-                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2:-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
+                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2,-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
                     listBox1.Items.Add(student);
                 }
             }
@@ -127,7 +127,7 @@ namespace CurseProject
 
                 while (sqlReader.Read())
                 {
-                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2:-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
+                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2,-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
                     listBox1.Items.Add(student);
                 }
             }
@@ -188,7 +188,7 @@ namespace CurseProject
                 {
                     sr += double.Parse(Convert.ToString(sqlReader["экзамены"]));
                     i++;
-                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2:-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
+                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2,-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
                     listBox1.Items.Add(student);
                 }
             }
@@ -230,7 +230,7 @@ namespace CurseProject
 
                     while (sqlReader.Read())
                     {
-                        String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2:-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
+                        String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2,-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
                         listBox1.Items.Add(student);
                     }
                 }
@@ -254,7 +254,7 @@ namespace CurseProject
 
                     while (sqlReader.Read())
                     {
-                        String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2:-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
+                        String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2,-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
                         listBox1.Items.Add(student);
                     }
                 }
@@ -278,7 +278,7 @@ namespace CurseProject
 
                     while (sqlReader.Read())
                     {
-                        String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2:-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
+                        String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2,-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
                         listBox1.Items.Add(student);
                     }
                 }
@@ -308,7 +308,7 @@ namespace CurseProject
 
                 while (sqlReader.Read())
                 {
-                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2:-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
+                    String student = String.Format("ID: {0,2} | ФИО {1,-35} | группа-{2,-6} | зачёты-{3,-1} из 5 |средний балл-{4,-3} ", sqlReader["Id"], sqlReader["ФИО"], sqlReader["группа"], sqlReader["зачёты"], sqlReader["экзамены"]);
                     listBox1.Items.Add(student);
                 }
             }

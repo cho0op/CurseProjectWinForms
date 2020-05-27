@@ -54,6 +54,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(327, 87);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(177, 20);
             this.textBox1.TabIndex = 40;
             // 
@@ -118,6 +119,7 @@
             this.Controls.Add(this.label1);
             this.Name = "deleting";
             this.Text = "deleting";
+            this.Load += new System.EventHandler(this.deleting_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);

@@ -56,11 +56,11 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -90,6 +90,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel5.Controls.Add(this.comboBox1);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.checkBox5);
             this.panel5.Controls.Add(this.checkBox4);
@@ -115,7 +116,6 @@
             this.panel5.Controls.Add(this.label42);
             this.panel5.Controls.Add(this.label43);
             this.panel5.Controls.Add(this.label44);
-            this.panel5.Controls.Add(this.textBox2);
             this.panel5.Controls.Add(this.label45);
             this.panel5.Controls.Add(this.textBox1);
             this.panel5.Controls.Add(this.label46);
@@ -377,13 +377,6 @@
             this.label44.TabIndex = 10;
             this.label44.Text = "Общая инфорамция";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(75, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(177, 20);
-            this.textBox2.TabIndex = 9;
-            // 
             // label45
             // 
             this.label45.AutoSize = true;
@@ -424,6 +417,14 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "добавить";
             this.button4.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(75, 106);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(177, 21);
+            this.comboBox1.TabIndex = 39;
             // 
             // addStudent
             // 
@@ -472,10 +473,10 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

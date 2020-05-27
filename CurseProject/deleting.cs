@@ -43,5 +43,10 @@ namespace CurseProject
             f.Show();
             this.Hide();
         }
+
+        private void deleting_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = data.studentId.ToString();
+        }
     }
 }

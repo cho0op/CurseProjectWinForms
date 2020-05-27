@@ -26,9 +26,15 @@ namespace CurseProject
 
             SqlDataReader sqlReader = null;
             SqlCommand command = new SqlCommand("SELECT * FROM [Students] ", SqlConnection);
-
             SqlConnection.Open();
             string path = @"D:\мои файлы\my projects\CurseProject\CurseProject\data.txt";
+            SqlCommand groups = new SqlCommand("SELECT DISTINCT [группа] FROM [Students]", SqlConnection);
+            sqlReader = groups.ExecuteReader();
+            while (sqlReader.Read())
+            {
+                comboBox1.Items.Add(sqlReader["группа"]);
+            }
+            sqlReader.Close();
             using (StreamWriter sw = new StreamWriter(path, true))
             {
                 try
@@ -53,21 +59,21 @@ namespace CurseProject
         {
             try
             {
-                int.Parse(textBox2.Text);
+                int.Parse(comboBox1.Text);
             }
             catch (System.FormatException)
             {
                 MessageBox.Show("Номер группы должен состоять из 6 цифр!");
-                textBox2.Text = "";
+                comboBox1.Text = "";
                 return;
             }
-            if (textBox2.Text.Length != 6)
+            if (comboBox1.Text.Length != 6)
             {
                 MessageBox.Show("Номер группы должен состоять из 6 цифр!");
-                textBox2.Text = "";
+                comboBox1.Text = "";
                 return;
             }
-            if (textBox2.Text == "" || textBox1.Text == "" || textBox26.Text == "" || textBox25.Text == "" || textBox24.Text == "" || textBox23.Text == "" || textBox22.Text == "")
+            if (comboBox1.Text == "" || textBox1.Text == "" || textBox26.Text == "" || textBox25.Text == "" || textBox24.Text == "" || textBox23.Text == "" || textBox22.Text == "")
             {
                 MessageBox.Show("Все поля с оценками, именем и группой должны быть заполнены!");
                 textBox26.Text = "";
@@ -87,7 +93,7 @@ namespace CurseProject
                 textBox22.Text = "";
                 return;
             }
-            SqlCommand command = new SqlCommand("INSERT INTO [Students] (ФИО, ГРУППА, зачёты, экзамены) VALUES (@ФИО, @ГРУППА, @зачёты, @экзамены)", SqlConnection);
+            SqlCommand command = new SqlCommand("INSERT INTO [Students] (ФИО, ГРУППА, зачёты, экзамены, политология, история, ВОВ, психология, физкультура, БЖЧ, ОАиПр, Черчение, Математика, Физика) VALUES (@ФИО, @ГРУППА, @зачёты, @экзамены, @политология, @история, @ВОВ, @психология, @физкультура, @БЖЧ, @ОАиПр, @Черчение, @Математика, @Физика)", SqlConnection);
             int zach = 0;
             double ekz = 0;
             if (checkBox1.Checked)
@@ -120,9 +126,35 @@ namespace CurseProject
             }
             ekz = ekz / 5;
             command.Parameters.AddWithValue("ФИО", textBox1.Text);
-            command.Parameters.AddWithValue("ГРУППА", textBox2.Text);
+            command.Parameters.AddWithValue("ГРУППА", comboBox1.Text);
             command.Parameters.AddWithValue("зачёты", zach);
             command.Parameters.AddWithValue("экзамены", ekz);
+            if(checkBox1.Checked)
+                command.Parameters.AddWithValue("политология", 1);
+            else
+                command.Parameters.AddWithValue("политология", 0);
+            if (checkBox2.Checked)
+                command.Parameters.AddWithValue("история", 1);
+            else
+                command.Parameters.AddWithValue("история", 0);
+            if (checkBox3.Checked)
+                command.Parameters.AddWithValue("ВОВ", 1);
+            else
+                command.Parameters.AddWithValue("ВОВ", 0);
+            if (checkBox4.Checked)
+                command.Parameters.AddWithValue("психология", 1);
+            else
+                command.Parameters.AddWithValue("психология", 0);
+            if (checkBox5.Checked)
+                command.Parameters.AddWithValue("физкультура", 1);
+            else
+                command.Parameters.AddWithValue("физкультура", 0);
+            command.Parameters.AddWithValue("БЖЧ", int.Parse(textBox26.Text));
+            command.Parameters.AddWithValue("ОАиПр", int.Parse(textBox25.Text));
+            command.Parameters.AddWithValue("Черчение", int.Parse(textBox24.Text));
+            command.Parameters.AddWithValue("Математика", int.Parse(textBox23.Text));
+            command.Parameters.AddWithValue("Физика", int.Parse(textBox22.Text));
+
             try
             {
                 command.ExecuteNonQuery();
@@ -141,7 +173,7 @@ namespace CurseProject
             checkBox3.Checked = false;
             checkBox4.Checked = false;
             checkBox5.Checked = false;
-            textBox2.Text = "";
+            comboBox1.Text = "";
             textBox1.Text = "";
             textBox26.Text = "";
             textBox25.Text = "";

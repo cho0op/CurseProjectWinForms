@@ -56,18 +56,19 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox27 = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.panel5.Controls.Add(this.comboBox2);
             this.panel5.Controls.Add(this.textBox1);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label7);
@@ -95,7 +96,6 @@
             this.panel5.Controls.Add(this.label42);
             this.panel5.Controls.Add(this.label43);
             this.panel5.Controls.Add(this.label44);
-            this.panel5.Controls.Add(this.textBox27);
             this.panel5.Controls.Add(this.label45);
             this.panel5.Controls.Add(this.textBox28);
             this.panel5.Controls.Add(this.label46);
@@ -108,8 +108,10 @@
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(75, 55);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(177, 20);
             this.textBox1.TabIndex = 40;
             // 
@@ -375,13 +377,6 @@
             this.label44.TabIndex = 10;
             this.label44.Text = "Общая инфорамция";
             // 
-            // textBox27
-            // 
-            this.textBox27.Location = new System.Drawing.Point(75, 106);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(177, 20);
-            this.textBox27.TabIndex = 9;
-            // 
             // label45
             // 
             this.label45.AutoSize = true;
@@ -436,6 +431,14 @@
             this.label1.Text = "редактировать информацию о студенте";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(75, 106);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(177, 21);
+            this.comboBox2.TabIndex = 41;
+            // 
             // Updating
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,6 +448,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Updating";
             this.Text = "Updating";
+            this.Load += new System.EventHandler(this.Updating_Load);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -479,7 +483,6 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox27;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.Label label46;
@@ -487,5 +490,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

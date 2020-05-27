@@ -84,6 +84,7 @@
             this.passField.Size = new System.Drawing.Size(263, 40);
             this.passField.TabIndex = 4;
             this.passField.UseSystemPasswordChar = true;
+            this.passField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passField_KeyPress);
             // 
             // pictureBox2
             // 
@@ -105,6 +106,7 @@
             this.loginField.Size = new System.Drawing.Size(263, 64);
             this.loginField.TabIndex = 2;
             this.loginField.TextChanged += new System.EventHandler(this.loginField_TextChanged);
+            this.loginField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.loginField_KeyPress);
             // 
             // pictureBox1
             // 
