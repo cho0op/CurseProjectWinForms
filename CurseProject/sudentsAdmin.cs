@@ -235,7 +235,7 @@ namespace CurseProject
                 return;
             }
             listBox1.Items.Clear();
-            if (textBox2.Text != "")
+            if (textBox2.Text != "" && int.TryParse(textBox2.Text, out int j))
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM [Students] WHERE зачёты='" + Convert.ToString(5 - int.Parse(textBox2.Text)) + "'", SqlConnection);
                 try
@@ -259,7 +259,7 @@ namespace CurseProject
                 }
                 textBox2.Text = "";
             }
-            else if (textBox3.Text != "")
+            else if (textBox3.Text != "" && int.TryParse(textBox2.Text, out int k))
             {
                 SqlCommand command = new SqlCommand("SELECT * FROM [Students] WHERE экзамены='" + textBox3.Text + "'", SqlConnection);
                 try
